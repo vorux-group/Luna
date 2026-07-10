@@ -1,0 +1,18 @@
+@mixin transition_defult($item, $s, $mod){
+    transition: $item $s $mod;
+}
+
+@mixin btn_global($backColor, $width, $foreColor, $h_backColor, $h_foreColor){
+    width: $width;
+    height: 48px;
+    background-color: $backColor;
+    color: $foreColor;
+    border: 2px solid #C3B0A2;
+    border-radius: 999px;
+    cursor: pointer;
+    @include transition_defult(all, 0.3s, ease-in-out);
+    &:hover{
+        background-color: $h_backColor;
+        color: $h_foreColor;
+    }
+}

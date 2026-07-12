@@ -103,7 +103,7 @@ header .header--hamburger_menu.active span:nth-child(3) {
 .landing {
   width: 100%;
   height: 76.5vh;
-  margin-top: 15%;
+  margin-top: 150px;
   padding: 0 var(--space-lg) 0 var(--space-lg);
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +111,7 @@ header .header--hamburger_menu.active span:nth-child(3) {
 }
 .landing .landing--img {
   width: 37%;
-  height: 100%;
+  height: 550px;
   object-fit: cover;
   corner-shape: squircle;
   border-radius: 180px;
@@ -286,6 +286,9 @@ header .header--hamburger_menu.active span:nth-child(3) {
   }
   header .header--icons svg:nth-child(2) {
     width: 20px;
+  }
+  .landing {
+    margin-top: 140px;
   }
   .landing .landing--img {
     width: 40%;

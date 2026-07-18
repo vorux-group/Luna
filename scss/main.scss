@@ -241,7 +241,7 @@ header{
                 display: grid;
             }
 
-            .body--card:nth-child(){
+            .body--card{
                 border: 2px solid red;
                 border-radius: 25px;
                 padding: var(--space-lg);

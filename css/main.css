@@ -82,7 +82,7 @@ header .header--hamburger_menu span {
   height: 2.5px;
   background: rgb(0, 0, 0);
   border-radius: 3px;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease;
 }
 header .header--hamburger_menu.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
@@ -221,7 +221,6 @@ header .header--hamburger_menu.active span:nth-child(3) {
 }
 
 .tree_card {
-  border: 2px solid rgb(0, 255, 13);
   width: 95%;
   min-height: 100vh;
   margin: 0 auto;
@@ -234,7 +233,6 @@ header .header--hamburger_menu.active span:nth-child(3) {
 }
 .tree_card .tree_card--head {
   width: 100%;
-  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -274,7 +272,6 @@ header .header--hamburger_menu.active span:nth-child(3) {
   color: #C3B0A2;
 }
 .tree_card .tree_card--body {
-  border: 2px solid rgb(47, 0, 255);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -282,36 +279,59 @@ header .header--hamburger_menu.active span:nth-child(3) {
 .tree_card .tree_card--body .body--group {
   display: none;
   width: 100%;
+  height: 450px;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
+  gap: var(--space-xl);
 }
 .tree_card .tree_card--body .body--group.is-active {
   display: grid;
+  animation: fadeInCards 0.4s ease-in-out;
 }
 .tree_card .tree_card--body .body--group .body--card {
-  border: 2px solid red;
-  border-radius: 25px;
-  padding: var(--space-lg);
+  animation: fadeInCards 0.4s ease-in-out backwards;
+  border-radius: 90px;
+  padding: var(--space-sm);
+  corner-shape: squircle;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
-.tree_card .tree_card--body .body--group .body--card h3 {
+.tree_card .tree_card--body .body--group .body--card .card--item {
+  width: 100%;
+  height: 100px;
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  corner-shape: squircle;
+  border-radius: 40px 40px 90px 90px;
+}
+.tree_card .tree_card--body .body--group .body--card .card--item h3 {
   font-size: var(--text-lg);
 }
-.tree_card .tree_card--body .body--group .body--card .item--price {
+.tree_card .tree_card--body .body--group .body--card .card--item .item--price {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  margin-top: var(--space-sm);
 }
-.tree_card .tree_card--body .body--group .body--card .item--price del {
-  font-size: var(--text-sm);
-  opacity: 0.6;
-  margin-left: var(--space-xs);
+.tree_card .tree_card--body .body--group .body--card .card--item .item--price div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
 }
-.tree_card .tree_card--body .body--group .body--card .item--price b {
+.tree_card .tree_card--body .body--group .body--card .card--item .item--price del {
+  font-size: var(--text-lg);
+  opacity: 0.4;
+  font-weight: bold;
+}
+.tree_card .tree_card--body .body--group .body--card .card--item .item--price b {
   font-size: var(--text-lg);
 }
-.tree_card .tree_card--body .body--group .body--card .item--price .price--toman {
-  font-size: var(--text-xs);
+.tree_card .tree_card--body .body--group .body--card .card--item .item--price .price--toman {
+  rotate: 90deg;
+  font-size: var(--text-lg);
 }
 
 @media (max-width: 768px) {
@@ -392,6 +412,16 @@ header .header--hamburger_menu.active span:nth-child(3) {
   .landing {
     margin-top: 14%;
     height: 30vh;
+  }
+}
+@keyframes fadeInCards {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

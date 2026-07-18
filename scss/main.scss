@@ -3,6 +3,7 @@
 
 /* root */
 :root {
+    // اندازه متن ها
     --text-xs: clamp(0.7rem, 0.8vw, 0.8rem);
     --text-sm: clamp(0.85rem, 1vw, 0.95rem);
     --text-base: clamp(0.9rem, 1.2vw, 1.1rem);
@@ -11,7 +12,7 @@
     --text-2xl: clamp(1.5rem, 3vw, 2.5rem);
     --text-3xl: clamp(1.75rem, 4vw, 4rem);
 
-    /* فاصله ریسپانسیو */
+    // فاصله ها 
   --space-xs:  clamp(0.4rem, 1vw, 0.6rem);
   --space-sm:  clamp(0.75rem, 1.5vw, 1rem);
   --space-md:  clamp(1rem,   2vw,  1.5rem);
@@ -24,10 +25,6 @@
 
 body{
     background-color: $back-color;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
 }
 
 header{
@@ -113,10 +110,9 @@ header{
 }
 
 .landing{
-    width: 100%;
+    width: 95%;
     height: 76.5vh;
-    margin-top: 150px;
-    padding: 0 var(--space-lg) 0 var(--space-lg);
+    margin: 150px auto 0 auto;
     display: flex;
     flex-wrap: wrap;
     column-gap: 55px;
@@ -165,7 +161,7 @@ header{
 .responsiv_landing{
     width: 95%;
     height: 80vh;
-    margin-top: 14vh;
+    margin: 14vh auto 0 auto;
     display: none;
     align-items: center;
     justify-content: space-between;
@@ -197,6 +193,88 @@ header{
         }
 }
 
+// START TREE CARD STYLE
+.tree_card{
+    border: 2px solid rgb(0, 255, 13);
+    width: 95%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding-top: var(--space-lg);
+
+    .tree_card--head{
+        width: 100%;
+        border: 2px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: var(--space-xs);
+        .head--btn{
+            height: 40px !important;
+            @include btn_global($back-color,120px,$kerem-color,$kerem-color,$back-color);
+            font-size: var(--text-base);
+
+            &.is-active{
+                @include btn_global($kerem-color,120px,$back-color,$back-color,$kerem-color);
+            }
+        }
+    }
+
+    .tree_card--body{
+        border: 2px solid rgb(47, 0, 255);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .body--group{
+            display: none;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+
+            &.is-active{
+                display: grid;
+            }
+
+            .body--card:nth-child(){
+                border: 2px solid red;
+                border-radius: 25px;
+                padding: var(--space-lg);
+
+                h3{
+                    font-size: var(--text-lg);
+                }
+
+                .item--price{
+                    display: flex;
+                    align-items: center;
+                    gap: var(--space-xs);
+                    margin-top: var(--space-sm);
+
+                    del{
+                        font-size: var(--text-sm);
+                        opacity: 0.6;
+                        margin-left: var(--space-xs);
+                    }
+
+                    b{
+                        font-size: var(--text-lg);
+                    }
+
+                    .price--toman{
+                        font-size: var(--text-xs);
+                    }
+                }
+            }
+        }
+    }
+}
+// END TREE CARD STYLE
 
 @media (max-width: 768px) {
 

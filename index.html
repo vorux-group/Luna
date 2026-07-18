@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/pages/page1.css">
 </head>
     <body>
-    <!-- just for test. -->
+        <!-- START HEADER -->
     <header>
         <div class="header--logo">luna</div>
         <nav class="header--nav" id="menu">
@@ -22,14 +22,14 @@
             </ul>
         </nav>
         <div class="header--icons">
-            <!-- search icon -->
+            <!-- SEARCH ICON -->
             <?xml version="1.0" encoding="UTF-8"?><svg width="26px" height="26px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M17 17L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            <!-- bag icon -->
+            <!-- BAG ICON -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" id="Shopping-Bag-Hand-Bag-2--Streamline-Flex" height="22px" width="22px"><g id="shopping-bag-hand-bag-2--shopping-bag-purse-goods-item-products"> <path id="Vector 193" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.25v-1C4.5 1.86929 5.61929 0.75 7 0.75v0c1.38071 0 2.5 1.11929 2.5 2.5v1" stroke-width="1"></path> <path id="Vector 191" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M1 10.25c0 -2.0712 0.37239 -3.73278 0.79579 -5.27397 0.11827 -0.43053 0.51203 -0.72603 0.95851 -0.72603h8.4914c0.4465 0 0.8402 0.2955 0.9585 0.72603C12.6276 6.51722 13 8.1788 13 10.25c0 1.5 -0.9728 2.5204 -2.5 2.7602 -0.88896 0.1396 -2 0.2398 -3.5 0.2398s-2.61104 -0.1002 -3.5 -0.2398C1.97277 12.7704 1 11.75 1 10.25Z" stroke-width="1"></path> </g> </svg>
-            <!-- user icon  -->
+            <!-- USER ICON  -->
             <?xml version="1.0" encoding="UTF-8"?><svg width="28px" height="29px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M5 20V19C5 15.134 8.13401 12 12 12V12C15.866 12 19 15.134 19 19V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </div>
-        <!-- hemberger menu -->
+        <!-- HEMBERGER MENU -->
         <button class="header--hamburger_menu" id="hamburger"> 
             <span></span>
             <span></span>
@@ -37,20 +37,21 @@
         </button>
 
     </header>
+    <!-- END HEADER -->
 
-    <!-- start landing/banner -->
+    <!-- START LANDING/BANNER -->
     <section class="landing">
         <img class="landing--img" src="assets/img/Luna_landing.jpg" alt="landing-image">
-        <div class="landing--box_items">
+        <aside class="landing--box_items">
             <h1>لونا، جایی که راحتی و سادگی به هم می‌رسند.</h1>
             <span>طراحی مینیمال، خطوطی آرام و متریالی با کیفیت، لحظه‌های خانه تان راتبدیل به تحربه‌ای دلنشین می‌کند.</span>
             <div class="landing--box_items--btn">
                 <button>مشاهده محصولات</button>
                 <button>مشاوره رایگان</button>
             </div>
-        </div>
+        </aside>
     </section>
-    <!-- responsiv -->
+    <!-- START RESPONSIVE LANDING -->
     <section class="responsiv_landing">
         <h1>لونا، جایی که راحتی و سادگی به هم می‌رسند.</h1>
         <div class="responsiv_landing--btn">
@@ -58,9 +59,148 @@
             <button>مشاوره رایگان</button>
         </div>
     </section>
-    <!-- end landing/bannere -->
+    <!-- END RESPONDIVE LANDING -->
+    <!-- END LANDING/BANNERE -->
     
+    <!-- START TREE CARD (SLIDER) -->
+<section class="tree_card">
+    <div class="tree_card--head">
+        <button class="head--btn is-active" data-target="minimal">مینیمال</button>
+        <button class="head--btn" data-target="modern">مدرن</button>
+        <button class="head--btn" data-target="classic">کلاسیک</button>
+        <button class="head--btn" data-target="comfort">راحتی</button>
+    </div>
+
+    <div class="tree_card--body">
+
+        <div class="body--group is-active" data-group="minimal">
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>صندلی ابر</h3>
+                    <div class="item--price">
+                        <div>
+                            <del>۹,۵۰۰,۰۰۰</del>
+                            <b>۷,۵۰۰,۰۰۰</b>
+                        </div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>مبل تک‌نفره لونا</h3>
+                    <div class="item--price">
+                        <div><b>۵,۲۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>میز عسلی سبک</h3>
+                    <div class="item--price">
+                        <div><b>۲,۹۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body--group" data-group="modern">
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>صندلی فلزی مدرن</h3>
+                    <div class="item--price">
+                        <div><b>۶,۱۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>مبل ال شکل مدرن</h3>
+                    <div class="item--price">
+                        <div><b>۱۲,۵۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>میز جلومبلی شیشه‌ای</h3>
+                    <div class="item--price">
+                        <div><b>۴,۳۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body--group" data-group="classic">
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>صندلی چوبی کلاسیک</h3>
+                    <div class="item--price">
+                        <div><b>۷,۸۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>مبل کلاسیک طلایی</h3>
+                    <div class="item--price">
+                        <div><b>۱۸,۰۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>میز عسلی حکاکی‌شده</h3>
+                    <div class="item--price">
+                        <div><b>۵,۵۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body--group" data-group="comfort">
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>صندلی راحتی ابری</h3>
+                    <div class="item--price">
+                        <div><b>۸,۹۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>مبل استراحتی</h3>
+                    <div class="item--price">
+                        <div><b>۱۴,۲۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body--card">
+                <div class="card--item">
+                    <h3>پاف راحتی</h3>
+                    <div class="item--price">
+                        <div><b>۲,۱۰۰,۰۰۰</b></div>
+                        <div class="price--toman">تومان</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- END TREE CARD (SLIDER) -->
     <script src="js/main.js"></script>
     <script src="js/modules/hamburger.js"></script>
+    <script src="js/modules/tree_card.js"></script>
 </body>
 </html>

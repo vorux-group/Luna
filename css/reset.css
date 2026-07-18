@@ -1,25 +1,48 @@
 /* CSS Reset */
-    *,
-    *::before,
-    *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-        user-select: none;
-    }
-    
-    html, body {
-        overflow: auto;
-        width: 100%;
-        height: 100%;
-    }
-    
-    body { line-height: 1.5; font-family: sans-serif; }
-    
-    img, picture, video, canvas, svg { display: block; max-width: 100%; }
-    
-    input, button, textarea, select { font: inherit; }
-    
-    a { text-decoration: none; color: inherit; }
-    
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    user-select: none;
+}
+
+html,
+body {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #C3B0A2 transparent;
+}

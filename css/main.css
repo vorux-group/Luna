@@ -273,8 +273,11 @@ header .header--hamburger_menu.active span:nth-child(3) {
 }
 .tree_card .tree_card--body {
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid red;
 }
 .tree_card .tree_card--body .body--group {
   display: none;

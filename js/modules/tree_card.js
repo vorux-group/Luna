@@ -13,13 +13,14 @@ function initSwiper(groupEl) {
     if (!mq.matches) return;
 
     activeSwiper = new Swiper(groupEl, {
-        slidesPerView: 1,
-        spaceBetween:0,
-        pagination: {
-            el: groupEl.querySelector('.swiper-pagination'),
-            clickable: true
-        }
-    });
+    slidesPerView: 1,
+    spaceBetween: 0,
+    dir: 'rtl',
+    pagination: {
+        el: groupEl.querySelector('.swiper-pagination'),
+        clickable: true
+    }
+});
 }
 
 function activateGroup(target) {

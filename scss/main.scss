@@ -42,6 +42,7 @@ header{
     top: 4%;
     right: 50%;
     transform: translateX(50%);
+    z-index: 999;
 
     .header--logo{
         font-size: var(--text-xl);
@@ -204,6 +205,7 @@ header{
     flex-direction: column;
     gap: var(--space-lg);
     padding-top: var(--space-lg);
+    border: 2px solid green;
 
     .tree_card--head{
         width: 100%;
@@ -225,104 +227,23 @@ header{
 
     .tree_card--body{
         width: 100%;
-        height: 100%;
+        height: 80%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border: 2px solid red;
 
-        .body--group{
-            display: none;
-            width: 100%;
-            height: 450px;
-            position: relative;
-
-            &.is-active{
-                display: block;
-                animation: fadeInCards 0.4s ease-in-out;
-            }
-
-            
-            .swiper-wrapper{
-                width: 100%;
-                height: 100%;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: var(--space-xl);
-            }
-
-            .swiper-pagination{
-                display: none;
-            }
-
-            .body--card{
-                animation: fadeInCards 0.4s ease-in-out backwards;
-                border-radius: 90px;
-                padding: var(--space-sm);
-                corner-shape: squircle;
-                display: flex;
-                justify-content: flex-end;
-                flex-direction: column;
-
-                .card--item{
-                    width: 100%;
-                    height: 100px;
-                    padding: var(--space-lg);
-                    background: rgba(255,255,255,0.1);
-                    backdrop-filter: blur(4px);
-                    border: 1.5px solid rgba(255,255,255,0.4);
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    corner-shape: squircle;
-                    border-radius: 40px 40px 90px 90px;
-
-                    h3{ font-size: var(--text-lg); }
-
-                    .item--price{
-                        display: flex;
-                        align-items: center;
-                        gap: var(--space-xs);
-
-                        div:nth-child(1){
-                            display: flex;
-                            flex-direction: column;
-                        }
-
-                        del{ font-size: var(--text-lg); opacity: 0.4; font-weight: bold; }
-                        b{ font-size: var(--text-lg); }
-                        .price--toman{ rotate: 90deg; font-size: var(--text-lg); }
-                    }
-                }
-            }
-
-            @media (max-width: 768px){
-                height: auto;
-                padding-bottom: var(--space-lg);
-
-                .swiper-wrapper{
-                    display: flex;
-                }
-
-                .body--card{
-                    width: 100%;
-                    flex-shrink: 0;
-                    height: 320px;
-                }
-
-                .swiper-pagination{
-                    display: block;
-                    position: static;
-                    margin-top: var(--space-sm);
-                }
-                .swiper-pagination-bullet {
-                    &.swiper-pagination-bullet-active {
-                        background: $kerem_color;
-                    }
-                }
-            }
+        .body--card{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid red;
         }
     }
 }
+
 // END TREE CARD STYLE
 
 @media (max-width: 768px) {

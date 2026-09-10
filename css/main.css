@@ -223,27 +223,25 @@ header .header--hamburger_menu.active span:nth-child(3) {
 
 .tree_card {
   width: 95%;
-  min-height: 100vh;
-  margin: 0 auto;
+  height: 82vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
-  gap: var(--space-lg);
-  padding-top: var(--space-lg);
-  border: 2px solid green;
+  margin: 40px auto 0 auto;
 }
 .tree_card .tree_card--head {
   width: 100%;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  column-gap: var(--space-xs);
+  gap: var(--space-xs);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
 }
 .tree_card .tree_card--head .head--btn {
-  height: 40px !important;
-  width: 120px;
+  width: 9%;
   height: 48px;
   background-color: #FAFAFA;
   color: #C3B0A2;
@@ -256,38 +254,83 @@ header .header--hamburger_menu.active span:nth-child(3) {
   background-color: #C3B0A2;
   color: #FAFAFA;
 }
-.tree_card .tree_card--head .head--btn {
-  font-size: var(--text-base);
-}
-.tree_card .tree_card--head .head--btn.is-active {
-  width: 120px;
-  height: 48px;
-  background-color: #C3B0A2;
+.tree_card .tree_card--head .is-active-btn {
+  background: #C3B0A2;
   color: #FAFAFA;
-  border: 2px solid #C3B0A2;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.tree_card .tree_card--head .head--btn.is-active:hover {
-  background-color: #FAFAFA;
-  color: #C3B0A2;
 }
 .tree_card .tree_card--body {
   width: 100%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 2px solid red;
+  height: 100%;
+  padding-top: var(--space-lg);
+  position: relative;
 }
-.tree_card .tree_card--body .body--card {
-  width: 30%;
+.tree_card .tree_card--body .tree_card_swiper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+.tree_card .tree_card--body .tree_card_swiper.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.tree_card .tree_card--body .tree_card_swiper .swiper-slide {
+  corner-shape: squircle;
+  border-radius: 180px;
+}
+.tree_card .tree_card--body .tree_card_swiper .body--card {
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: var(--space-md);
+}
+.tree_card .tree_card--body .tree_card_swiper .body--card .card--item {
+  width: 100%;
+  height: 25%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(7px);
+  border-radius: 100px 100px 180px 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-md) 0 var(--space-md);
+}
+.tree_card .tree_card--body .tree_card_swiper .body--card .card--item h2 {
+  color: #1f1f1f;
+}
+.tree_card .tree_card--body .tree_card_swiper .body--card .card--item .item--price {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  border: 2px solid red;
+}
+.tree_card .tree_card--body .tree_card_swiper .body--card .card--item .item--price div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.tree_card .tree_card--body .tree_card_swiper .body--card .card--item .item--price div:nth-child(1) del {
+  font-size: var(--text-lg);
+  opacity: 0.4;
+  font-weight: bold;
+}
+.tree_card .tree_card--body .tree_card_swiper .body--card .card--item .item--price div:nth-child(1) b {
+  font-size: var(--text-lg);
+}
+.tree_card .tree_card--body .tree_card_swiper .body--card .card--item .item--price .price--toman {
+  rotate: 90deg;
+  font-size: var(--text-lg);
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

@@ -197,53 +197,119 @@ header{
 // START TREE CARD STYLE
 .tree_card{
     width: 95%;
-    min-height: 100vh;
-    margin: 0 auto;
+    height: 82vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
-    gap: var(--space-lg);
-    padding-top: var(--space-lg);
-    border: 2px solid green;
+    margin: 40px auto 0 auto;
 
     .tree_card--head{
         width: 100%;
+        height: fit-content;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        flex-wrap: wrap;
-        column-gap: var(--space-xs);
-        .head--btn{
-            height: 40px !important;
-            @include btn_global($back-color,120px,$kerem-color,$kerem-color,$back-color);
-            font-size: var(--text-base);
+        gap: var(--space-xs);
+        padding-top: var(--space-sm);
+        padding-bottom: var(--space-sm);
 
-            &.is-active{
-                @include btn_global($kerem-color,120px,$back-color,$back-color,$kerem-color);
-            }
+        .head--btn{
+            @include btn_global($back-color,9%,$kerem-color,$kerem-color,$back-color);
+        }
+
+        .is-active-btn{
+            background: $kerem-color;
+            color: $back-color;
         }
     }
 
     .tree_card--body{
         width: 100%;
-        height: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border: 2px solid red;
+        height: 100%;
+        padding-top: var(--space-lg);
+        position: relative;
 
-        .body--card{
-            width: 30%;
+        .tree_card_swiper{
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid red;
+            width: 100%;
+            position: absolute; // همه توی یک جا روی هم بشینن
+            top: 0;
+            left: 0;
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.8s ease;
+
+        &.is-active{
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+            .swiper-slide{
+                corner-shape: squircle;
+                border-radius: 180px;
+            }
+            .body--card{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-direction: column;
+                padding: var(--space-md);
+
+                .card--item{
+                    width: 100%;
+                    height: 25%;
+                    background: rgba(255,255,255,0.1);
+                    border: 1px solid rgba(255,255,255,0.3);
+                    backdrop-filter: blur(7px);
+                    border-radius: 100px 100px 180px 180px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 var(--space-md) 0 var(--space-md);
+
+                    h2{
+                        color: $text-color;
+                    }
+
+                    .item--price{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        div:nth-child(1){
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            flex-direction: column;
+
+                            del{
+                                font-size: var(--text-lg);
+                                opacity: 0.4;
+                                font-weight: bold;
+                            }
+
+                            b{
+                                font-size: var(--text-lg);
+                            }
+                        }
+                        
+                        .price--toman{
+                            rotate: 90deg;
+                            font-size: var(--text-lg);
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
         }
     }
 }
-
 // END TREE CARD STYLE
 
 @media (max-width: 768px) {

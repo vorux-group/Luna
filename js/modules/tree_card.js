@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     disableOnInteraction: false,
                 },
             },
-            1080: {
+            1024: {
                 slidesPerView: 3,
-                spaceBetween: 15,
+                spaceBetween: 25,
             },
         },
             // بقیه تنظیمات Swiper دلخواهت اینجا

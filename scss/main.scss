@@ -120,7 +120,7 @@ header{
 
     .landing--img{
         width:37%;
-        height: 550px;
+        height: 95%;
         object-fit: cover;
         corner-shape: squircle;
         border-radius: 180px;
@@ -197,7 +197,7 @@ header{
 // START TREE CARD STYLE
 .tree_card{
     width: 95%;
-    height: 82vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,7 +233,7 @@ header{
         .tree_card_swiper{
             height: 100%;
             width: 100%;
-            position: absolute; // همه توی یک جا روی هم بشینن
+            position: absolute;
             top: 0;
             left: 0;
 
@@ -312,6 +312,18 @@ header{
 }
 // END TREE CARD STYLE
 
+@media (min-width: 300px) and (max-width: 769px){
+.tree_card--head{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .head--btn{
+        width: 49% !important; 
+    }
+}
+}
 @media (max-width: 768px) {
 
     header{
@@ -372,7 +384,6 @@ header{
         }
     }
 }
-
 @media (min-width: 769px) and (max-width: 1024px){
     header{
         .header--icons{
@@ -395,10 +406,17 @@ header{
             width: 50%;
         }
     }
+    
 }
 
-@media (min-width: 1024px) and (max-width: 1200px){
-    
+@media (min-width: 1920px){
+    .landing{
+        margin-top: 200px;
+    }
+    .tree_card{
+        height: 63vh;
+        row-gap: 30px;
+    }
 }
 
 @media (min-height: 1200px){
@@ -409,6 +427,7 @@ header{
         margin-top: 14%;
         height: 30vh;
     }
+    
 }
 
 @keyframes fadeInCards {
